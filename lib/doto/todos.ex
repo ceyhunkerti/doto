@@ -18,7 +18,6 @@ defmodule Doto.Todos do
 
   """
   def list_items do
-    # Repo.all(Item)
     Item |> order_by(asc: :is_done, desc: :inserted_at) |> Repo.all
   end
 
