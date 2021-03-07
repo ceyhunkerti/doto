@@ -1,6 +1,6 @@
 # Doto
 
-A todo app in its simplest form. Do not try this at home ;)
+A todo app in its simplest form.
 
 ## Demo
 
