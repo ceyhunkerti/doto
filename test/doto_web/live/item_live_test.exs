@@ -48,7 +48,7 @@ defmodule DotoWeb.ItemLiveTest do
     test "updates item in listing", %{conn: conn, item: item} do
       {:ok, index_live, _html} = live(conn, Routes.item_index_path(conn, :index))
 
-      assert index_live |> element("#item-#{item.id} a", "Edit") |> render_click() =~
+      assert index_live |> element("#item-#{item.id} a", "📝") |> render_click() =~
                "Edit Item"
 
       assert_patch(index_live, Routes.item_index_path(conn, :edit, item))
@@ -70,7 +70,7 @@ defmodule DotoWeb.ItemLiveTest do
     test "deletes item in listing", %{conn: conn, item: item} do
       {:ok, index_live, _html} = live(conn, Routes.item_index_path(conn, :index))
 
-      assert index_live |> element("#item-#{item.id} a", "Delete") |> render_click()
+      assert index_live |> element("#item-#{item.id} a", "❌") |> render_click()
       refute has_element?(index_live, "#item-#{item.id}")
     end
   end
